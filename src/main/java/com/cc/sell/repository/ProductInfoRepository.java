@@ -5,6 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 /**
  * hello
  *  chenchao
@@ -12,7 +14,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProductInfoRepository extends JpaRepository<ProductInfo, String> {
 
-    Page<ProductInfo> findAll(Pageable page);
+    List<ProductInfo> findByProductStatus(Integer status);
 
 
 }

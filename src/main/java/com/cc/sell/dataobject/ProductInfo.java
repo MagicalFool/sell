@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Data
 @Entity
@@ -35,14 +36,14 @@ public class ProductInfo {
    *  chenchao
    */
   
-  private double productPrice;
+  private BigDecimal productPrice;
   
   /**
    * 库存
    *  chenchao
    */
   
-  private long productStock;
+  private Integer productStock;
   
   /**
    *  商品描述
@@ -63,13 +64,13 @@ public class ProductInfo {
    *  chenchao
    */
   
-  private long productStatus;
+  private Integer productStatus;
   
   /**
    *  商品类型
    *  chenchao
    */
   
-  private long categoryType;
+  private Integer categoryType;
 
 }

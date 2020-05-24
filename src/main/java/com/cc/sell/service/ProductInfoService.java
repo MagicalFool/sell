@@ -13,6 +13,7 @@ import java.util.List;
  */
 public interface ProductInfoService {
 
+    List<ProductInfo> findByProductStatus(Integer status);
 
     ProductInfo findOne(String productId);
 
@@ -22,29 +23,11 @@ public interface ProductInfoService {
 
     Page<ProductInfo> findAllByPage(Pageable pageable);
 
-    /**
-     *  add
-     *  chenchao
-     */
-    
-    ProductInfo save(ProductInfo productInfo);
-    
-    /**
-     *  delete
-     *  chenchao
-     */
-    
-    ProductInfo delete(String productId);
-    
-    /**
-     *  modify
-     *  chenchao
-     */
-    
-    ProductInfo modify(ProductInfo productInfo);
-    
-    
 
-    List<ProductInfo> findAll(Pageable pageable);
+    ProductInfo save(ProductInfo productInfo);
+
+    // 加库存
+
+    // 减库存
 
 }

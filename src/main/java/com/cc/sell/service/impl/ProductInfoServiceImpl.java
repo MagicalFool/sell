@@ -22,6 +22,11 @@ public class ProductInfoServiceImpl implements ProductInfoService {
     private ProductInfoRepository repository;
 
     @Override
+    public List<ProductInfo> findByProductStatus(Integer status) {
+        return repository.findByProductStatus(status);
+    }
+
+    @Override
     public ProductInfo findOne(String productId) {
         return repository.findOne(productId);
     }
@@ -36,24 +41,8 @@ public class ProductInfoServiceImpl implements ProductInfoService {
         return repository.findAll(pageable);
     }
 
-
     @Override
     public ProductInfo save(ProductInfo productInfo) {
         return repository.save(productInfo);
-    }
-
-    @Override
-    public ProductInfo delete(String productId) {
-        return null;
-    }
-
-    @Override
-    public ProductInfo modify(ProductInfo productInfo) {
-        return null;
-    }
-
-    @Override
-    public List<ProductInfo> findAll(Pageable pageable) {
-        return null;
     }
 }
